@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, "Microsoft Yahei";
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1e272e;
+}
+
+.slider {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  /* 禁用掉浏览器默认样式 */
+  -webkit-appearance: none;
+  background: linear-gradient(75deg, #3c40c6, #575fcf);
+  border-radius: 4px;
+  width: 100%;
+  height: 12px;
+  outline: none;
+  box-shadow: 0 0 6px rgb(28, 32, 148);
+}
+
+/* 滑动选择器按键设置样式 */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #f53b57;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background: #ef5777;
+  box-shadow: 0 0 0 6px rgba(155, 73, 146, .4);
+}
+
+/* 数值显示框 */
+.selected {
+  display: inline-block;
+  margin-right: 16px;
+  background-color: #ff5533;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+}
+
+.selected::after {
+  content: "";
+  display: block;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #f53b57;
+  position: absolute;
+  top: calc(50% - 8px);
+  right: -6px;
+}
