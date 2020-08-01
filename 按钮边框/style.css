@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2f3542;
+}
+
+.button-wrapper {
+  position: relative;
+  width: 240px;
+  height: 60px;
+  text-align: center;  
+  cursor: pointer;
+}
+
+.rectangle {
+  stroke-width: 8px;
+  stroke: #ff6348;
+  fill: transparent;
+  /* 单数值表示实线长度 双数虚线 */
+  stroke-dasharray: 100 500;
+  /* 偏移量=总长度-|参数值|%总长度 */
+  /* ? = 600 - 375 % 600 = 225 */
+  /* 240 + 60 + (240-100)/2 = 300 + 70 */
+  stroke-dashoffset: -372;
+}
+
+.btn {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 6px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes extend {
+  to {
+    stroke-dasharray: 600;
+    /* stroke-dasharray: 0; */
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+  }
+}
+
+.button-wrapper:hover .rectangle {
+  animation: 0.5s extend linear forwards;
+}
