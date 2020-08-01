@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  /* viewport height */
+  justify-content: center;
+  background-color: #1e272e;
+}
+
+ul {
+  width: 500px;
+}
+
+li {
+  list-style: none;
+  color: #d2dae2;
+  font-size: 18px;
+  margin: 48px 0;
+  position: relative;
+}
+
+li::before,
+li::after {
+  content: "";
+  display: block;
+  height: 16px;
+  width: 100%;
+  background-color: #1f4a59;
+  position: absolute;
+  bottom: -28px;
+  border-radius: 6px;
+}
+
+li::before {
+  box-shadow: 0 0 6px rgba(75, 207, 250, .2)
+}
+
+li::after {
+  background-image: linear-gradient(90deg, #0fbcf9, #34e7e4);
+  animation: 1.2s ease-in-out forwards;
+}
+
+.js::after {
+  animation-name: js;
+}
+.html::after {
+  animation-name: html;
+}
+.css::after {
+  animation-name: css;
+}
+.vue::after {
+  animation-name: vue;
+}
+.node::after {
+  animation-name: node;
+}
+
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes vue {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10%;
+  }
+}
+@keyframes node {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
