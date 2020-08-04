@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2f3542;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cube {
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  animation: rotate-cube 10s ease-in-out infinite;
+}
+
+.cube > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  opacity: .9;
+  position: absolute;
+  box-shadow: inset 0 0 4px 2px rgba(106, 106, 106, 0.4);
+}
+
+/* 前 */
+.cube .img1 {
+  background-image: url(../img/kakki.jpg);
+  transform: translateZ(125px);
+}
+
+/* 右 */
+.cube .img2 {
+  background-image: url(../img/mayu.jpg);
+  transform: rotateY(90deg) translateZ(125px);
+}
+
+/* 左 */
+.cube .img3 {
+  background-image: url(../img/rei.jpg);
+  transform: rotateY(-90deg) translateZ(125px);
+}
+
+/* 下 */
+.cube .img4 {
+  background-image: url(../img/sakura.jpg);
+  transform: rotateX(90deg) translateZ(125px);
+}
+
+/* 上 */
+.cube .img5 {
+  background-image: url(../img/saya.jpg);
+  transform: rotateX(-90deg) translateZ(125px);
+}
+
+/* 后 */
+.cube .img6 {
+  background-image: url(../img/sayaka.jpg);
+  transform: rotateY(180deg) translateZ(125px);
+}
+
+@keyframes rotate-cube {
+  0% {
+    /* 前 */
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  16% {
+    /* 右 */
+    transform: rotateY(-90deg);
+  }
+  32% {
+    /* 下 */
+    transform: rotateX(-90deg)
+  }
+  50% {
+    /* 左 */
+    transform: rotateY(90deg)
+  }
+  65% {
+    transform: rotateY(180deg);
+  }
+  80% {
+    /* 上 */
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
