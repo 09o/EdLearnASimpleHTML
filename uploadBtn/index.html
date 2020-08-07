@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <div class="upload-button">
+      <!-- viewBox 位置 0 0  宽高 （比例1：1） -->
+      <svg class="arrow" width="40" hight="40" viewBox="0 0 40 40">
+        <!-- circle  stroke边框 -->
+        <circle 
+          cx="50%" 
+          cy="50%" 
+          r="19" 
+          fill="none" 
+          stroke="#fff" 
+          stroke-width="2">
+        </circle>
+        <!-- 多个线段 以点作为参数 -->
+        <polyline 
+          points="6,20 20,6 34,20" 
+          fill="none" 
+          stroke="#fff" 
+          stroke-width="2" 
+          class="arrow-top">
+        </polyline>
+        <line 
+          x1="50%" 
+          y1="7" 
+          x2="50%" 
+          y2="34" 
+          stroke="#fff" 
+          stroke-width="2" 
+          class="middle-line">
+        </line>
+        <polyline 
+          points="8,20 18,30 30 12" 
+          stroke="#fff" 
+          stroke-width="2" 
+          fill="none" 
+          class="checkmark">
+        </polyline>
+      </svg>
+      <div class="progress-bar"></div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
