@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <div class="calculator">
+      <!-- 显示结果 -->
+      <div class="result" style="grid-area: result">
+        {{ equation }}
+      </div>
+      <!-- 19个按钮 其中8个功能键 -->
+      <!-- 功能键 -->
+      <button @click="clear" style="grid-area: ac">AC</button>
+      <button @click="calculateToggle" style="grid-area: plus-minus">±</button>
+      <button @click="calculatePercentage" style="grid-area: percent">%</button>
+      <button @click="append('+')" style="grid-area: add">+</button>
+      <button @click="append('-')" style="grid-area: subtract">-</button>
+      <button @click="append('×')" style="grid-area: multiply">×</button>
+      <button @click="append('÷')" style="grid-area: divide">÷</button>
+      <button @click="calculate" style="grid-area: equal">=</button>
+      <!-- 数 style="grid-area: result"字键 -->
+      <button @click="append('1')" style="grid-area: number-1">1</button>
+      <button @click="append('2')" style="grid-area: number-2">2</button>
+      <button @click="append('3')" style="grid-area: number-3">3</button>
+      <button @click="append('4')" style="grid-area: number-4">4</button>
+      <button @click="append('5')" style="grid-area: number-5">5</button>
+      <button @click="append('6')" style="grid-area: number-6">6</button>
+      <button @click="append('7')" style="grid-area: number-7">7</button>
+      <button @click="append('8')" style="grid-area: number-8">8</button>
+      <button @click="append('9')" style="grid-area: number-9">9</button>
+      <button @click="append('0')" style="grid-area: number-0">0</button>
+
+      <button @click="append('.')" style="grid-area: dot">.</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
