@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "UD Digi Kyokasho NK-R";
+}
+
+body {
+  background-color: #1e272e;
+  min-width: 375px;
+}
+
+main {
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596605678795&di=90e724dcaf92fca32697e078243170e3&imgtype=0&src=http%3A%2F%2Fpic.soutu123.com%2Fback_pic%2F02%2F67%2F53%2F77578e1933a2af7.jpg%2521%2Ffw%2F700%2Fquality%2F90%2Funsharp%2Ftrue%2Fcompress%2Ftrue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.row {
+  display: flex;
+}
+
+.pro-card-wrapper {
+  /* 开启3d空间 */
+  perspective: 300px;
+}
+
+.pro-card {
+  width: 180px;
+  height: 180px;
+  margin: 4px;
+  font-size: 48px;
+  position: relative;
+  text-align: center;
+  /* 翻转特效时间 */
+  transition: transform 0.8s;
+  /* 保留3d空间 */
+  transform-style: preserve-3d;
+}
+
+/* 假名 */
+
+.hiragana, .katakana {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border: 1px solid #d2dae2;
+  color: #fff;
+}
+
+/* 翻转卡片 */
+.katakana {
+  transform: rotateY(180deg)
+}
+
+.pro-card-wrapper:hover .pro-card {
+  transform: rotateY(180deg);
+}
