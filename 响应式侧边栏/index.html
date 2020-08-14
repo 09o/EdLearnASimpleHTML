@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="../lib/font-awesome/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div class="navigation">
+		<ul>
+			<li>
+				<a href="#">
+					<i class="fa fa-home"></i>
+					<span>Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-user"></i>
+					<span>Profile</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-comment"></i>
+					<span>Message</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-question-circle"></i>
+					<span>Help</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-cog"></i>
+					<span>Setting</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-lock"></i>
+					<span>Password</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="fa fa-sign-out-alt"></i>
+					<span>Sign Out</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="toggle" onclick="toggleMenu()"></div>
+	<script>
+		function toggleMenu() {
+			let navigation = document.querySelector('.navigation')
+			let toggle = document.querySelector('.toggle')
+			navigation.classList.toggle('active')
+			toggle.classList.toggle('active')
+		}
+	</script>
+</body>
+</html>
