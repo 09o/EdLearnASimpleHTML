@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "UD Digi Kyokasho NK-B", "Microsoft Yahei";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(../img/ka.png) right top/cover no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 450px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, rgba(193, 207, 221, .7), rgba(249, 221, 235, .8));
+  box-shadow: 12px 12px 10px -5px rgba(33, 45, 58, .1);
+  overflow: hidden;
+  position: relative;
+}
+
+.container h1 {
+  color: #4686a5;
+  font-weight: 100;
+  letter-spacing: 5px;
+  background-image: -webkit-linear-gradient(135deg, #4588a7 0%, pink 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container form {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container form .forms {
+  width: 200px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: none;
+  color: #4686a5;
+  font-size: 17px;
+}
+
+.container form .forms::placeholder {
+  color: #fff;
+  opacity: .7;
+}
+
+.container form .sub {
+  width: 200px;
+  height: 40px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, .7);
+  background: none;
+  color: #4686a5;
+  font-size: 17px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.container form .sub:hover {
+	border-color: #4686a5;
+	background: #4686a5;
+	color: #fff;
+}
+
+.container .mouseenter {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: #3498bd;
+	transform: translate(-50%, -50%);
+	animation: enter .5s ease-out forwards;
+}
+
+.container .mouseleave {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 1200px;
+	height: 1200px;
+	border-radius: 50%;
+	background: #3498bd;
+	transform: translate(-50%, -50%);
+	animation: leave .5s ease-out forwards;
+}
+
+@keyframes enter {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	100% {
+		width: 1200px;
+		height: 1200px;
+	}
+}
+
+@keyframes leave {
+	0% {
+		width: 1200px;
+		height: 1200px;
+	}
+
+	100% {
+		width: 0;
+		height: 0;
+	}
+}

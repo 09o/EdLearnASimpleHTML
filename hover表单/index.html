@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>さくらの坂道</h1>
+    <form action="">
+      <input class="forms" type="text" placeholder="Username">
+      <input class="forms" type="password" placeholder="Password">
+      <input class="sub" type="submit" value="Login">
+    </form>
+  </div>
+  <script>
+  const container = document.querySelector('.container')
+
+  let entered = true
+  let left = false
+
+  var span
+
+  container.addEventListener('mouseenter', (e) => {
+    if (entered) {
+      // 生成元素的位置 = 进入点距离窗口的距离 - 父元素距离窗口的距离
+      let enterX = e.clientX - e.target.offsetLeft
+      let enterY = e.clientY - e.target.offsetTop
+
+      let el = document.createElement('span')
+      el.style.left = enterX + 'px'
+      el.style.top = enterY + 'px'
+
+      container.appendChild(el)
+      span = document.querySelector('.container > span')
+      span.classList.remove('mouseleave')
+      span.classList.add('mouseenter')
+
+      enterend = false
+      left = true
+    }
+  })
+
+  container.addEventListener('mouseleave', (e) => {
+    if (left) {
+      // 生成元素的位置 = 进入点距离窗口的距离 - 父元素距离窗口的距离
+      let enterX = e.clientX - e.target.offsetLeft
+      let enterY = e.clientY - e.target.offsetTop
+
+      span = document.querySelector('.container > span')
+      span.classList.remove('mouseenter')
+      span.classList.add('mouseleave')
+      span.style.left = enterX + 'px'
+      span.style.top = enterY + 'px'
+
+      left = false
+
+      setTimeout(() => {
+        container.removeChild(span)
+        enteren = true
+      }, 500)
+    }
+  })
+  </script>
+</body>
+
+</html>
